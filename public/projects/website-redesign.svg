@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="820" viewBox="0 0 1000 820" fill="none">
+  <defs>
+    <linearGradient id="paper" x1="78" y1="52" x2="900" y2="770" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F4F1E9"/>
+      <stop offset="1" stop-color="#D8DDD2"/>
+    </linearGradient>
+    <linearGradient id="photo" x1="559" y1="320" x2="910" y2="673" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C5D278"/>
+      <stop offset="1" stop-color="#677263"/>
+    </linearGradient>
+    <clipPath id="photo-clip"><rect x="554" y="299" width="357" height="335" rx="3"/></clipPath>
+    <style>
+      .website-nav, .website-eyebrow, .website-copy, .website-cta, .website-caption {
+        opacity: 0;
+        animation: website-enter .55s cubic-bezier(.22,.8,.2,1) forwards;
+      }
+      .website-nav { animation-delay: .1s; }
+      .website-eyebrow { animation-delay: .22s; }
+      .website-copy { animation-delay: .38s; }
+      .website-copy-last { animation-delay: .52s; }
+      .website-cta { animation-delay: .72s; }
+      .website-scene {
+        opacity: 0;
+        animation: scene-reveal .85s cubic-bezier(.22,.8,.2,1) .5s forwards;
+      }
+      .website-accent {
+        stroke-dasharray: 340;
+        stroke-dashoffset: 340;
+        animation: accent-draw 1.15s ease-out 1.2s forwards;
+      }
+      .website-caption { animation-delay: 1.05s; }
+      @keyframes website-enter {
+        from { opacity: 0; transform: translateY(9px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes scene-reveal {
+        to { opacity: 1; }
+      }
+      @keyframes accent-draw {
+        to { stroke-dashoffset: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .website-nav, .website-eyebrow, .website-copy, .website-cta, .website-caption, .website-scene, .website-accent {
+          animation: none;
+          opacity: 1;
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+  </defs>
+  <path fill="url(#paper)" d="M0 0h1000v820H0z"/>
+  <circle cx="908" cy="86" r="180" fill="#C4F13C" fill-opacity=".38"/>
+  <rect x="73" y="76" width="854" height="668" rx="18" fill="#111311" fill-opacity=".08"/>
+  <rect x="58" y="58" width="854" height="668" rx="18" fill="#FAF9F6"/>
+  <path d="M58 76c0-9.94 8.06-18 18-18h818c9.94 0 18 8.06 18 18v48H58V76Z" fill="#F0EFE9"/>
+  <circle cx="88" cy="91" r="7" fill="#D57C6C"/>
+  <circle cx="113" cy="91" r="7" fill="#E5B45B"/>
+  <circle cx="138" cy="91" r="7" fill="#A8C860"/>
+  <rect x="314" y="78" width="342" height="26" rx="13" fill="#FAF9F6"/>
+  <g class="website-nav">
+    <text x="91" y="170" fill="#111311" font-family="Arial,sans-serif" font-size="19" font-weight="700" letter-spacing="2">NORTH / STUDIO</text>
+    <text x="650" y="170" fill="#565753" font-family="Arial,sans-serif" font-size="14">Work</text>
+    <text x="718" y="170" fill="#565753" font-family="Arial,sans-serif" font-size="14">Studio</text>
+    <rect x="784" y="150" width="94" height="38" rx="3" fill="#C4F13C"/>
+    <text x="801" y="174" fill="#111311" font-family="Arial,sans-serif" font-size="12" font-weight="700">Let's talk ↗</text>
+  </g>
+  <path d="M91 250h395" stroke="#D8D7D0"/>
+  <text class="website-eyebrow" x="91" y="306" fill="#111311" font-family="Arial,sans-serif" font-size="17" letter-spacing="3">INDEPENDENT CREATIVE STUDIO</text>
+  <text class="website-copy" x="86" y="389" fill="#111311" font-family="Georgia,serif" font-size="70" letter-spacing="-4">Make room</text>
+  <text class="website-copy website-copy-last" x="86" y="463" fill="#111311" font-family="Georgia,serif" font-size="70" font-style="italic" letter-spacing="-4">for better.</text>
+  <text class="website-copy" x="91" y="518" fill="#62635D" font-family="Arial,sans-serif" font-size="17">A thoughtful digital home for a</text>
+  <text class="website-copy website-copy-last" x="91" y="544" fill="#62635D" font-family="Arial,sans-serif" font-size="17">new generation of ideas.</text>
+  <g class="website-cta">
+    <rect x="91" y="585" width="145" height="47" rx="3" fill="#111311"/>
+    <text x="111" y="614" fill="#FAF9F6" font-family="Arial,sans-serif" font-size="13" font-weight="700">Explore the work ↗</text>
+  </g>
+  <g class="website-scene" clip-path="url(#photo-clip)">
+    <path fill="url(#photo)" d="M554 299h357v335H554z"/>
+    <circle cx="795" cy="385" r="89" fill="#E9DFB1"/>
+    <path d="m500 540 147-154 88 86 86-126 158 169v119H500V540Z" fill="#69766A"/>
+    <path d="m500 582 164-128 116 90 109-112 145 105v97H500v-52Z" fill="#3D4942"/>
+    <path d="M554 620c81-32 157-23 233 10 43 19 82 21 124 2v36H554v-48Z" fill="#C4F13C"/>
+    <path class="website-accent" d="M577 629c96-27 191-8 294 37" stroke="#F5F1DE" stroke-opacity=".5" stroke-width="3"/>
+  </g>
+  <rect x="554" y="299" width="357" height="335" rx="3" stroke="#111311" stroke-opacity=".1"/>
+  <text class="website-caption" x="554" y="674" fill="#565753" font-family="Arial,sans-serif" font-size="13" letter-spacing="2">IDENTITY · DIGITAL · EXPERIENCE</text>
+</svg>

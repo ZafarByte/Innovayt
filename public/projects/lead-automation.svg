@@ -1,0 +1,109 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="820" viewBox="0 0 1000 820" fill="none">
+  <defs>
+    <linearGradient id="backdrop" x1="75" y1="55" x2="925" y2="760" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E7EADF"/>
+      <stop offset="1" stop-color="#D2D8CB"/>
+    </linearGradient>
+    <linearGradient id="phone" x1="358" y1="90" x2="650" y2="737" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#292D29"/>
+      <stop offset="1" stop-color="#111311"/>
+    </linearGradient>
+    <filter id="shadow" x="315" y="57" width="371" height="713" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="18"/>
+    </filter>
+    <style>
+      .incoming-message, .auto-response, .qualified-lead, .lead-capture, .lead-follow-up {
+        opacity: 0;
+        animation: workflow-enter .55s cubic-bezier(.22,.8,.2,1) forwards;
+      }
+      .incoming-message { animation-delay: .25s; }
+      .auto-response { animation-delay: .65s; }
+      .qualified-lead { animation-delay: 1s; }
+      .lead-capture { animation-delay: .45s; }
+      .lead-follow-up { animation-delay: 1.1s; }
+      .workflow-path {
+        stroke-dasharray: 8 10;
+        stroke-dashoffset: 18;
+        opacity: 0;
+        animation: workflow-draw .9s ease-out .2s forwards;
+      }
+      .qualified-check {
+        stroke-dasharray: 22;
+        stroke-dashoffset: 22;
+        animation: check-draw .4s ease-out 1.35s forwards;
+      }
+      @keyframes workflow-enter {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes workflow-draw {
+        to { opacity: 1; stroke-dashoffset: 0; }
+      }
+      @keyframes check-draw {
+        to { stroke-dashoffset: 0; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .incoming-message, .auto-response, .qualified-lead, .lead-capture, .lead-follow-up, .workflow-path, .qualified-check {
+          animation: none;
+          opacity: 1;
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+  </defs>
+  <path fill="url(#backdrop)" d="M0 0h1000v820H0z"/>
+  <circle cx="113" cy="111" r="168" fill="#C4F13C" fill-opacity=".46"/>
+  <circle cx="901" cy="711" r="211" fill="#A5B49B" fill-opacity=".48"/>
+  <path class="workflow-path" d="M114 593c78-103 153-152 227-150m318-81c87-16 154-3 223 50" stroke="#9AA596" stroke-width="2" stroke-dasharray="8 10"/>
+  <circle cx="341" cy="443" r="8" fill="#A7D624"/>
+  <circle cx="652" cy="362" r="8" fill="#A7D624"/>
+  <rect x="351" y="83" width="298" height="646" rx="43" fill="#000" fill-opacity=".18" filter="url(#shadow)"/>
+  <rect x="361" y="76" width="278" height="646" rx="40" fill="url(#phone)"/>
+  <rect x="373" y="91" width="254" height="616" rx="30" fill="#F6F5F0"/>
+  <path d="M450 91h100c0 14-11 25-25 25h-50c-14 0-25-11-25-25Z" fill="#111311"/>
+  <path d="M373 157c0-8.84 7.16-16 16-16h222c8.84 0 16 7.16 16 16v75H373v-75Z" fill="#FAF9F6"/>
+  <circle cx="410" cy="193" r="22" fill="#C4F13C"/>
+  <path d="M400 193h20m-10-10v20" stroke="#111311" stroke-width="2" stroke-linecap="round"/>
+  <text x="444" y="190" fill="#111311" font-family="Arial,sans-serif" font-size="15" font-weight="700">New inquiry</text>
+  <text x="444" y="210" fill="#777872" font-family="Arial,sans-serif" font-size="11">Just now · Website</text>
+  <text x="392" y="270" fill="#777872" font-family="Arial,sans-serif" font-size="11" letter-spacing="1">TODAY</text>
+  <g class="incoming-message">
+  <rect x="391" y="289" width="191" height="78" rx="14" fill="#E6E8E1"/>
+  <text x="407" y="319" fill="#353833" font-family="Arial,sans-serif" font-size="12">Hi, I'm looking for help</text>
+  <text x="407" y="340" fill="#353833" font-family="Arial,sans-serif" font-size="12">with a new website.</text>
+  <text x="550" y="359" fill="#777872" font-family="Arial,sans-serif" font-size="9">9:41 AM</text>
+  </g>
+  <g class="auto-response">
+  <path d="M438 389h154c8.84 0 16 7.16 16 16v54c0 8.84-7.16 16-16 16h-92l-27 18 7-18h-42c-8.84 0-16-7.16-16-16v-54c0-8.84 7.16-16 16-16Z" fill="#DDF3A8"/>
+  <text x="450" y="418" fill="#353833" font-family="Arial,sans-serif" font-size="12">Thanks for reaching out!</text>
+  <text x="450" y="439" fill="#353833" font-family="Arial,sans-serif" font-size="12">What are your goals?</text>
+  <text x="545" y="458" fill="#777872" font-family="Arial,sans-serif" font-size="9">9:41 AM ✓✓</text>
+  </g>
+  <g class="qualified-lead">
+  <rect x="391" y="510" width="181" height="65" rx="12" fill="#FAF9F6"/>
+  <circle cx="416" cy="542" r="12" fill="#C4F13C"/>
+  <path class="qualified-check" d="m411 542 4 4 7-8" stroke="#111311" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="438" y="538" fill="#111311" font-family="Arial,sans-serif" font-size="11" font-weight="700">Lead qualified</text>
+  <text x="438" y="556" fill="#777872" font-family="Arial,sans-serif" font-size="10">Added to your pipeline</text>
+  </g>
+  <rect x="391" y="654" width="222" height="35" rx="17.5" fill="#E9EAE4"/>
+  <text x="408" y="676" fill="#888A82" font-family="Arial,sans-serif" font-size="11">Message</text>
+  <circle cx="584" cy="671" r="12" fill="#A7D624"/>
+  <path d="m579 671 10 0m-4-4 4 4-4 4" stroke="#111311" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+  <g class="lead-capture">
+  <rect x="77" y="334" width="212" height="108" rx="12" fill="#FAF9F6"/>
+  <circle cx="111" cy="370" r="17" fill="#C4F13C"/>
+  <path d="M102 370h18m-9-9v18" stroke="#111311" stroke-width="2" stroke-linecap="round"/>
+  <text x="142" y="366" fill="#111311" font-family="Arial,sans-serif" font-size="13" font-weight="700">Capture lead</text>
+  <text x="102" y="410" fill="#777872" font-family="Arial,sans-serif" font-size="11">Website · WhatsApp · Social</text>
+  </g>
+  <g class="lead-follow-up">
+  <rect x="708" y="378" width="215" height="108" rx="12" fill="#FAF9F6"/>
+  <circle cx="744" cy="414" r="17" fill="#E9ECE3"/>
+  <path d="M735 414h18m-9-9v18" stroke="#66715E" stroke-width="2" stroke-linecap="round"/>
+  <text x="775" y="410" fill="#111311" font-family="Arial,sans-serif" font-size="13" font-weight="700">Follow up</text>
+  <text x="739" y="454" fill="#777872" font-family="Arial,sans-serif" font-size="11">Personalized · On time</text>
+  </g>
+  <text x="79" y="485" fill="#565753" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">ALWAYS-ON CONVERSATIONS</text>
+  <text x="708" y="529" fill="#565753" font-family="Arial,sans-serif" font-size="12" letter-spacing="2">SMART WORKFLOWS</text>
+</svg>

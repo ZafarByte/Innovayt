@@ -1,0 +1,149 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="820" viewBox="0 0 1000 820" fill="none">
+  <defs>
+    <linearGradient id="canvas" x1="61" y1="46" x2="924" y2="781" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#E6E9DF"/>
+      <stop offset="1" stop-color="#D3D8CC"/>
+    </linearGradient>
+    <linearGradient id="panel" x1="138" y1="93" x2="873" y2="729" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#202520"/>
+      <stop offset="1" stop-color="#111511"/>
+    </linearGradient>
+    <linearGradient id="area" x1="543" y1="344" x2="543" y2="581" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#C4F13C" stop-opacity=".3"/>
+      <stop offset="1" stop-color="#C4F13C" stop-opacity="0"/>
+    </linearGradient>
+    <style>
+      .metric-card {
+        opacity: 0;
+        animation: dashboard-enter .55s cubic-bezier(.22,.8,.2,1) forwards;
+      }
+      .metric-card-two { animation-delay: .12s; }
+      .metric-card-three { animation-delay: .24s; }
+      .chart-area {
+        opacity: 0;
+        animation: area-reveal .9s ease-out .45s forwards;
+      }
+      .chart-line {
+        stroke-dasharray: 650;
+        stroke-dashoffset: 650;
+        animation: line-draw 1.55s cubic-bezier(.22,.8,.2,1) .35s forwards;
+      }
+      .chart-previous {
+        opacity: 0;
+        animation: area-reveal .65s ease-out 1.25s forwards;
+      }
+      .channel-one, .channel-two, .channel-three {
+        transform-box: fill-box;
+        transform-origin: left center;
+        transform: scaleX(0);
+        animation: channel-fill .7s cubic-bezier(.22,.8,.2,1) forwards;
+      }
+      .channel-one { animation-delay: 1.05s; }
+      .channel-two { animation-delay: 1.2s; }
+      .channel-three { animation-delay: 1.35s; }
+      @keyframes dashboard-enter {
+        from { opacity: 0; transform: translateY(8px); }
+        to { opacity: 1; transform: translateY(0); }
+      }
+      @keyframes line-draw {
+        to { stroke-dashoffset: 0; }
+      }
+      @keyframes area-reveal {
+        to { opacity: 1; }
+      }
+      @keyframes channel-fill {
+        to { transform: scaleX(1); }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .metric-card, .chart-area, .chart-previous, .channel-one, .channel-two, .channel-three {
+          animation: none;
+          opacity: 1;
+          transform: none;
+        }
+        .chart-line {
+          animation: none;
+          stroke-dasharray: none;
+          stroke-dashoffset: 0;
+        }
+      }
+    </style>
+  </defs>
+  <path fill="url(#canvas)" d="M0 0h1000v820H0z"/>
+  <circle cx="938" cy="77" r="183" fill="#C4F13C" fill-opacity=".44"/>
+  <circle cx="83" cy="731" r="166" fill="#AAB6A0" fill-opacity=".45"/>
+  <rect x="82" y="65" width="836" height="690" rx="17" fill="#000" fill-opacity=".1"/>
+  <rect x="67" y="50" width="836" height="690" rx="17" fill="url(#panel)"/>
+  <rect x="67" y="50" width="196" height="690" rx="17" fill="#171B17"/>
+  <path d="M246 50h17v690h-17z" fill="#171B17"/>
+  <rect x="93" y="81" width="34" height="34" rx="9" fill="#C4F13C"/>
+  <path d="m101 99 7-12 8 12h-5l-3 5-3-5h-4Z" fill="#111311"/>
+  <text x="139" y="104" fill="#F6F5F0" font-family="Arial,sans-serif" font-size="17" font-weight="700">insight</text>
+  <text x="98" y="167" fill="#81877D" font-family="Arial,sans-serif" font-size="10" letter-spacing="2">WORKSPACE</text>
+  <rect x="88" y="185" width="155" height="43" rx="7" fill="#292F28"/>
+  <rect x="102" y="199" width="14" height="14" rx="3" fill="#C4F13C"/>
+  <path d="M106 209v-5m4 5v-8m4 8v-11" stroke="#111311" stroke-width="1.4" stroke-linecap="round"/>
+  <text x="127" y="204" fill="#F6F5F0" font-family="Arial,sans-serif" font-size="12">Overview</text>
+  <text x="127" y="218" fill="#AEB3A9" font-family="Arial,sans-serif" font-size="9">Performance</text>
+  <circle cx="109" cy="260" r="7" stroke="#777F73" stroke-width="1.5"/>
+  <path d="M109 256v8m-4-4h8" stroke="#777F73" stroke-width="1.5" stroke-linecap="round"/>
+  <text x="127" y="264" fill="#AEB3A9" font-family="Arial,sans-serif" font-size="12">Campaigns</text>
+  <rect x="102" y="294" width="14" height="14" rx="3" stroke="#777F73" stroke-width="1.5"/>
+  <path d="M105 304h8m-8-4h8" stroke="#777F73" stroke-width="1.2"/>
+  <text x="127" y="306" fill="#AEB3A9" font-family="Arial,sans-serif" font-size="12">Reports</text>
+  <circle cx="110" cy="359" r="7" stroke="#777F73" stroke-width="1.5"/>
+  <path d="M106 359h8m-4-4v8" stroke="#777F73" stroke-width="1.3" stroke-linecap="round"/>
+  <text x="127" y="363" fill="#AEB3A9" font-family="Arial,sans-serif" font-size="12">Audiences</text>
+  <path d="M92 683h145" stroke="#343A33"/>
+  <circle cx="110" cy="710" r="15" fill="#3C4738"/>
+  <text x="104" y="714" fill="#C4F13C" font-family="Arial,sans-serif" font-size="10" font-weight="700">IS</text>
+  <text x="136" y="707" fill="#F6F5F0" font-family="Arial,sans-serif" font-size="11">Inovayt Studio</text>
+  <text x="136" y="721" fill="#8D9388" font-family="Arial,sans-serif" font-size="9">Marketing team</text>
+  <text x="296" y="102" fill="#AAB1A5" font-family="Arial,sans-serif" font-size="11">Workspace / Overview</text>
+  <text x="296" y="145" fill="#F6F5F0" font-family="Arial,sans-serif" font-size="27" font-weight="700">Performance overview</text>
+  <text x="296" y="168" fill="#AAB1A5" font-family="Arial,sans-serif" font-size="12">Campaign activity at a glance</text>
+  <rect x="780" y="114" width="91" height="34" rx="5" fill="#292F28" stroke="#41483E"/>
+  <text x="795" y="136" fill="#D5D9D1" font-family="Arial,sans-serif" font-size="11">Last 30 days</text>
+  <g class="metric-card metric-card-one">
+  <rect x="294" y="197" width="177" height="113" rx="9" fill="#1C211C" stroke="#333A31"/>
+  <text x="311" y="223" fill="#AAB1A5" font-family="Arial,sans-serif" font-size="11">Reach</text>
+  <text x="311" y="260" fill="#F6F5F0" font-family="Arial,sans-serif" font-size="25" font-weight="700">Audience</text>
+  <path d="m311 284 8-5 8 2 8-10 8 3 8-9" stroke="#C4F13C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="371" y="285" fill="#C4F13C" font-family="Arial,sans-serif" font-size="10">↑ trend</text>
+  </g>
+  <g class="metric-card metric-card-two">
+  <rect x="489" y="197" width="177" height="113" rx="9" fill="#1C211C" stroke="#333A31"/>
+  <text x="506" y="223" fill="#AAB1A5" font-family="Arial,sans-serif" font-size="11">Engagement</text>
+  <text x="506" y="260" fill="#F6F5F0" font-family="Arial,sans-serif" font-size="25" font-weight="700">Interactions</text>
+  <path d="m506 284 8-3 8-8 8 4 8-13 8 1" stroke="#9DB5B8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="566" y="285" fill="#AAB1A5" font-family="Arial,sans-serif" font-size="10">↑ trend</text>
+  </g>
+  <g class="metric-card metric-card-three">
+  <rect x="684" y="197" width="187" height="113" rx="9" fill="#1C211C" stroke="#333A31"/>
+  <text x="701" y="223" fill="#AAB1A5" font-family="Arial,sans-serif" font-size="11">Conversions</text>
+  <text x="701" y="260" fill="#F6F5F0" font-family="Arial,sans-serif" font-size="25" font-weight="700">Outcomes</text>
+  <path d="m701 284 8-7 8 1 8-8 8-1 8-10" stroke="#D7B77D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="761" y="285" fill="#AAB1A5" font-family="Arial,sans-serif" font-size="10">↑ trend</text>
+  </g>
+  <rect x="294" y="330" width="577" height="284" rx="9" fill="#1C211C" stroke="#333A31"/>
+  <text x="315" y="360" fill="#F6F5F0" font-family="Arial,sans-serif" font-size="14" font-weight="700">Campaign performance</text>
+  <text x="315" y="381" fill="#8F968A" font-family="Arial,sans-serif" font-size="10">Activity over time</text>
+  <circle cx="726" cy="356" r="4" fill="#C4F13C"/>
+  <text x="737" y="360" fill="#B3B9AE" font-family="Arial,sans-serif" font-size="10">This period</text>
+  <circle cx="816" cy="356" r="4" fill="#74877D"/>
+  <text x="827" y="360" fill="#B3B9AE" font-family="Arial,sans-serif" font-size="10">Previous</text>
+  <path d="M326 421h514M326 465h514M326 509h514M326 553h514M326 588h514" stroke="#343A33" stroke-width="1"/>
+  <path class="chart-area" d="M326 553c35-2 44-28 77-23 34 5 42-30 77-25 33 4 42-36 77-31 36 5 47-23 80-20 39 4 42-35 80-32 42 4 60-35 123-43v209H326V553Z" fill="url(#area)"/>
+  <path class="chart-line" d="M326 553c35-2 44-28 77-23 34 5 42-30 77-25 33 4 42-36 77-31 36 5 47-23 80-20 39 4 42-35 80-32 42 4 60-35 123-43" stroke="#C4F13C" stroke-width="3" stroke-linecap="round"/>
+  <path class="chart-previous" d="M326 576c41-9 49-23 77-22 30 1 48-18 77-16 33 2 49-12 77-17 30-5 49-16 80-13 31 3 48-16 80-18 38-2 70-27 123-30" stroke="#74877D" stroke-width="2" stroke-dasharray="5 6" stroke-linecap="round"/>
+  <text x="326" y="602" fill="#858D81" font-family="Arial,sans-serif" font-size="9">WEEK 1</text>
+  <text x="445" y="602" fill="#858D81" font-family="Arial,sans-serif" font-size="9">WEEK 2</text>
+  <text x="570" y="602" fill="#858D81" font-family="Arial,sans-serif" font-size="9">WEEK 3</text>
+  <text x="694" y="602" fill="#858D81" font-family="Arial,sans-serif" font-size="9">WEEK 4</text>
+  <rect x="294" y="633" width="577" height="76" rx="9" fill="#1C211C" stroke="#333A31"/>
+  <text x="315" y="661" fill="#F6F5F0" font-family="Arial,sans-serif" font-size="12" font-weight="700">Channel mix</text>
+  <rect class="channel-one" x="315" y="677" width="229" height="7" rx="3.5" fill="#C4F13C"/>
+  <rect class="channel-two" x="544" y="677" width="143" height="7" fill="#8AA08B"/>
+  <rect class="channel-three" x="687" y="677" width="94" height="7" rx="3.5" fill="#D8B981"/>
+  <rect x="797" y="674" width="8" height="8" rx="4" fill="#C4F13C"/>
+  <text x="811" y="682" fill="#AAB1A5" font-family="Arial,sans-serif" font-size="9">Search · Social · Direct</text>
+</svg>
